@@ -23,6 +23,6 @@ public class SingleViewActivity extends Activity{
         ImageAdapter imageAdapter = new ImageAdapter(this);
         ImageView imageView = (ImageView) findViewById(R.id.SingleView);
         imageView.setImageResource(imageAdapter.mThumbIds[position]);
-        Toast.makeText(this,"id : "+imageAdapter.mThumbIds[position].toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"id : "+imageAdapter.mThumbIds[position].toString(), Toast.LENGTH_SHORT).show(); //toast
     }
 }
