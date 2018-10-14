@@ -20,16 +20,17 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setTitle("Chirag Ramchandanee");
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
-        gridview.setOnItemClickListener(this);
+        setTitle("Chirag Ramchandanee");//changing title 
+        
+        GridView gridview = (GridView) findViewById(R.id.gridview);//mapping of gridview of layout file
+        gridview.setAdapter(new ImageAdapter(this));//calling adapterClass
+        gridview.setOnItemClickListener(this);//to handle click event on click of image
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View v,int position, long id) {
         // Send intent to SingleViewActivity
-        Intent i = new Intent(getApplicationContext(), SingleViewActivity.class);
+        Intent i = new Intent(getApplicationContext(), SingleViewActivity.class);   //calling another activity to show clicked image 
         // Pass image index
         Toast.makeText(this,"Clicked image : "+position, Toast.LENGTH_SHORT).show();
         i.putExtra("id", position);
